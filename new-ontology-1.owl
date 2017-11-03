@@ -42,6 +42,15 @@
     
 
 
+    <!-- http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#hasSpiciness -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#hasSpiciness">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#SpicinessValuePartition"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#hasTopping -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#hasTopping">
@@ -90,6 +99,54 @@
     
 
 
+    <!-- http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#AmericanaHotPizza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#AmericanaHotPizza">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#NamedPizza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#JalapenoPepperTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#MozzarellaTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#PepperoniTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#TomatoTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#hasTopping"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#JalapenoPepperTopping"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#MozzarellaTopping"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#PepperoniTopping"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#TomatoTopping"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A pizza that has Mozarella, Tomato, pepperoni and Jalapeno toppings.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#AmericanaPizza -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#AmericanaPizza">
@@ -110,6 +167,20 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#hasTopping"/>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#TomatoTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#hasTopping"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#MozzarellaTopping"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#PepperoniTopping"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#TomatoTopping"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A pizza that has Mozarella, Tomato and pepperoni toppings.</rdfs:comment>
@@ -141,6 +212,24 @@
     
 
 
+    <!-- http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#CheezyPizza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#CheezyPizza">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#Pizza"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#hasTopping"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#CheeseTopping"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#DeepPanBase -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#DeepPanBase">
@@ -162,6 +251,14 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#HamTopping">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#MeatTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#Hot -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#Hot">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#SpicinessValuePartition"/>
     </owl:Class>
     
 
@@ -190,6 +287,19 @@
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#TomatoTopping"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#hasTopping"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#MozzarellaTopping"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#TomatoTopping"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A pizza that has only Mozarella and Tomato toppings</rdfs:comment>
     </owl:Class>
     
@@ -199,6 +309,22 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#MeatTopping">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#PizzaTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#Medium -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#Medium">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#SpicinessValuePartition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#Mild -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#Mild">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#SpicinessValuePartition"/>
     </owl:Class>
     
 
@@ -305,6 +431,16 @@
     
 
 
+    <!-- http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#ProbeInconsistentTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#ProbeInconsistentTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#CheeseTopping"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#VegetableTopping"/>
+        <rdfs:comment xml:lang="en">This class should be inconsistent when the ontology is classified.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#RedPepperTopping -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#RedPepperTopping">
@@ -329,6 +465,71 @@
     
 
 
+    <!-- http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#SohoPizza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#SohoPizza">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#NamedPizza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#MozzarellaTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#OliveTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#ParmezanTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#TomatoTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#hasTopping"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#MozzarellaTopping"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#OliveTopping"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#ParmezanTopping"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#TomatoTopping"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A pizza that has only Mozarella, Tomato, olives and parmesan toppings</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#SpicinessValuePartition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#SpicinessValuePartition">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#Hot"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#Medium"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#Mild"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#ValuePartition"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#SpicyBeefTopping -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#SpicyBeefTopping">
@@ -348,7 +549,7 @@
     <!-- http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#TomatoTopping -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#TomatoTopping">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#PizzaTopping"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#VegetableTopping"/>
     </owl:Class>
     
 
@@ -361,10 +562,41 @@
     
 
 
+    <!-- http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#ValuePartition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#ValuePartition"/>
+    
+
+
     <!-- http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#VegetableTopping -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#VegetableTopping">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#PizzaTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#VegetarianPizza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#VegetarianPizza">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#Pizza"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#hasTopping"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#CheeseTopping"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#VegetableTopping"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
     </owl:Class>
     
 
@@ -377,6 +609,15 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#AmericanaHotPizza"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#AmericanaPizza"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#MargheritaPizza"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#SohoPizza"/>
+        </owl:members>
+    </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
@@ -398,10 +639,21 @@
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#CaperTopping"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#MushroomTopping"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#OliveTopping"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#OnionTopping"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#PepperTopping"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#ProbeInconsistentTopping"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#TomatoTopping"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#CheeseTopping"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#MeatTopping"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#SeafoodTopping"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#TomatoTopping"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#VegetableTopping"/>
         </owl:members>
     </rdf:Description>
@@ -420,6 +672,14 @@
             <rdf:Description rdf:about="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#PepperoniTopping"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#SalamiTopping"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#SpicyBeefTopping"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#Hot"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#Medium"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/arunesh/ontologies/2017/10/new-ontology-1#Mild"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>

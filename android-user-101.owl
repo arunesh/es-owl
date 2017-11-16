@@ -240,6 +240,141 @@
     
 
 
+    <!-- http://inceptai.com/neo/ontologies/android-user-101#AlternativeDnsLatencyMs -->
+
+    <owl:DatatypeProperty rdf:about="http://inceptai.com/neo/ontologies/android-user-101#AlternativeDnsLatencyMs">
+        <rdfs:subPropertyOf rdf:resource="http://inceptai.com/neo/ontologies/android-user-101#PingProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://inceptai.com/neo/ontologies/android-user-101#AlternativeDnsMetric -->
+
+    <owl:DatatypeProperty rdf:about="http://inceptai.com/neo/ontologies/android-user-101#AlternativeDnsMetric">
+        <rdfs:subPropertyOf rdf:resource="http://inceptai.com/neo/ontologies/android-user-101#PingProperty"/>
+        <rdfs:range rdf:resource="http://inceptai.com/neo/ontologies/android-user-101#neo:MetricQualityEnum"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://inceptai.com/neo/ontologies/android-user-101#BandwidthErrorCode -->
+
+    <owl:DatatypeProperty rdf:about="http://inceptai.com/neo/ontologies/android-user-101#BandwidthErrorCode">
+        <rdfs:subPropertyOf rdf:resource="http://inceptai.com/neo/ontologies/android-user-101#BandwidthProperty"/>
+        <rdfs:range rdf:resource="http://inceptai.com/neo/ontologies/android-user-101#neo:ErrorCodesEnum"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://inceptai.com/neo/ontologies/android-user-101#BandwidthProperty -->
+
+    <owl:DatatypeProperty rdf:about="http://inceptai.com/neo/ontologies/android-user-101#BandwidthProperty"/>
+    
+
+
+    <!-- http://inceptai.com/neo/ontologies/android-user-101#BestServerLatencyMs -->
+
+    <owl:DatatypeProperty rdf:about="http://inceptai.com/neo/ontologies/android-user-101#BestServerLatencyMs">
+        <rdfs:subPropertyOf rdf:resource="http://inceptai.com/neo/ontologies/android-user-101#BandwidthProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://inceptai.com/neo/ontologies/android-user-101#DnsLatencyMetric -->
+
+    <owl:DatatypeProperty rdf:about="http://inceptai.com/neo/ontologies/android-user-101#DnsLatencyMetric">
+        <rdfs:subPropertyOf rdf:resource="http://inceptai.com/neo/ontologies/android-user-101#PingProperty"/>
+        <rdfs:range rdf:resource="http://inceptai.com/neo/ontologies/android-user-101#neo:MetricQualityEnum"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://inceptai.com/neo/ontologies/android-user-101#DnsLatencyMs -->
+
+    <owl:DatatypeProperty rdf:about="http://inceptai.com/neo/ontologies/android-user-101#DnsLatencyMs">
+        <rdfs:subPropertyOf rdf:resource="http://inceptai.com/neo/ontologies/android-user-101#PingProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://inceptai.com/neo/ontologies/android-user-101#DownloadBandwidthMetric -->
+
+    <owl:DatatypeProperty rdf:about="http://inceptai.com/neo/ontologies/android-user-101#DownloadBandwidthMetric">
+        <rdfs:subPropertyOf rdf:resource="http://inceptai.com/neo/ontologies/android-user-101#BandwidthProperty"/>
+        <rdfs:range rdf:resource="http://inceptai.com/neo/ontologies/android-user-101#neo:MetricQualityEnum"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://inceptai.com/neo/ontologies/android-user-101#DownloadLatencyMetric -->
+
+    <owl:DatatypeProperty rdf:about="http://inceptai.com/neo/ontologies/android-user-101#DownloadLatencyMetric">
+        <rdfs:subPropertyOf rdf:resource="http://inceptai.com/neo/ontologies/android-user-101#HttpProperty"/>
+        <rdfs:range rdf:resource="http://inceptai.com/neo/ontologies/android-user-101#neo:MetricQualityEnum"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://inceptai.com/neo/ontologies/android-user-101#DownloadMbps -->
+
+    <owl:DatatypeProperty rdf:about="http://inceptai.com/neo/ontologies/android-user-101#DownloadMbps">
+        <rdfs:subPropertyOf rdf:resource="http://inceptai.com/neo/ontologies/android-user-101#BandwidthProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://inceptai.com/neo/ontologies/android-user-101#ExternalServerLatencyMetric -->
+
+    <owl:DatatypeProperty rdf:about="http://inceptai.com/neo/ontologies/android-user-101#ExternalServerLatencyMetric">
+        <rdfs:subPropertyOf rdf:resource="http://inceptai.com/neo/ontologies/android-user-101#PingProperty"/>
+        <rdfs:range rdf:resource="http://inceptai.com/neo/ontologies/android-user-101#neo:MetricQualityEnum"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://inceptai.com/neo/ontologies/android-user-101#ExternalServerLatencyMs -->
+
+    <owl:DatatypeProperty rdf:about="http://inceptai.com/neo/ontologies/android-user-101#ExternalServerLatencyMs">
+        <rdfs:subPropertyOf rdf:resource="http://inceptai.com/neo/ontologies/android-user-101#PingProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://inceptai.com/neo/ontologies/android-user-101#HttpDownloadLatencyMs -->
+
+    <owl:DatatypeProperty rdf:about="http://inceptai.com/neo/ontologies/android-user-101#HttpDownloadLatencyMs">
+        <rdfs:subPropertyOf rdf:resource="http://inceptai.com/neo/ontologies/android-user-101#HttpProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://inceptai.com/neo/ontologies/android-user-101#HttpErrorCode -->
+
+    <owl:DatatypeProperty rdf:about="http://inceptai.com/neo/ontologies/android-user-101#HttpErrorCode">
+        <rdfs:subPropertyOf rdf:resource="http://inceptai.com/neo/ontologies/android-user-101#HttpProperty"/>
+        <rdfs:range rdf:resource="http://inceptai.com/neo/ontologies/android-user-101#neo:ErrorCodesEnum"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://inceptai.com/neo/ontologies/android-user-101#HttpProperty -->
+
+    <owl:DatatypeProperty rdf:about="http://inceptai.com/neo/ontologies/android-user-101#HttpProperty"/>
+    
+
+
+    <!-- http://inceptai.com/neo/ontologies/android-user-101#PingProperty -->
+
+    <owl:DatatypeProperty rdf:about="http://inceptai.com/neo/ontologies/android-user-101#PingProperty"/>
+    
+
+
     <!-- http://inceptai.com/neo/ontologies/android-user-101#PrimaryAPBSSID -->
 
     <owl:DatatypeProperty rdf:about="http://inceptai.com/neo/ontologies/android-user-101#PrimaryAPBSSID">
@@ -263,7 +398,7 @@
 
     <owl:DatatypeProperty rdf:about="http://inceptai.com/neo/ontologies/android-user-101#PrimaryAPLinkSpeed">
         <rdfs:subPropertyOf rdf:resource="http://inceptai.com/neo/ontologies/android-user-101#WifiNetworkProperty"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
     </owl:DatatypeProperty>
     
 
@@ -308,6 +443,42 @@
     
 
 
+    <!-- http://inceptai.com/neo/ontologies/android-user-101#RouterLatencyMetric -->
+
+    <owl:DatatypeProperty rdf:about="http://inceptai.com/neo/ontologies/android-user-101#RouterLatencyMetric">
+        <rdfs:subPropertyOf rdf:resource="http://inceptai.com/neo/ontologies/android-user-101#PingProperty"/>
+        <rdfs:range rdf:resource="http://inceptai.com/neo/ontologies/android-user-101#neo:MetricQualityEnum"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://inceptai.com/neo/ontologies/android-user-101#RouterLatencyMs -->
+
+    <owl:DatatypeProperty rdf:about="http://inceptai.com/neo/ontologies/android-user-101#RouterLatencyMs">
+        <rdfs:subPropertyOf rdf:resource="http://inceptai.com/neo/ontologies/android-user-101#PingProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://inceptai.com/neo/ontologies/android-user-101#UploadBandwidthMetric -->
+
+    <owl:DatatypeProperty rdf:about="http://inceptai.com/neo/ontologies/android-user-101#UploadBandwidthMetric">
+        <rdfs:subPropertyOf rdf:resource="http://inceptai.com/neo/ontologies/android-user-101#BandwidthProperty"/>
+        <rdfs:range rdf:resource="http://inceptai.com/neo/ontologies/android-user-101#neo:MetricQualityEnum"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://inceptai.com/neo/ontologies/android-user-101#UploadMbps -->
+
+    <owl:DatatypeProperty rdf:about="http://inceptai.com/neo/ontologies/android-user-101#UploadMbps">
+        <rdfs:subPropertyOf rdf:resource="http://inceptai.com/neo/ontologies/android-user-101#BandwidthProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://inceptai.com/neo/ontologies/android-user-101#WifiConnectivityMode -->
 
     <owl:DatatypeProperty rdf:about="http://inceptai.com/neo/ontologies/android-user-101#WifiConnectivityMode">
@@ -324,6 +495,15 @@
         <rdfs:subPropertyOf rdf:resource="http://inceptai.com/neo/ontologies/android-user-101#WifiNetworkProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://inceptai.com/neo/ontologies/android-user-101#WifiErrorCode -->
+
+    <owl:DatatypeProperty rdf:about="http://inceptai.com/neo/ontologies/android-user-101#WifiErrorCode">
+        <rdfs:subPropertyOf rdf:resource="http://inceptai.com/neo/ontologies/android-user-101#WifiNetworkProperty"/>
+        <rdfs:range rdf:resource="http://inceptai.com/neo/ontologies/android-user-101#neo:ErrorCodesEnum"/>
     </owl:DatatypeProperty>
     
 

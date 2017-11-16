@@ -262,6 +262,7 @@
 
     <owl:DatatypeProperty rdf:about="http://inceptai.com/neo/ontologies/android-user-101#BandwidthErrorCode">
         <rdfs:subPropertyOf rdf:resource="http://inceptai.com/neo/ontologies/android-user-101#BandwidthProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:range rdf:resource="http://inceptai.com/neo/ontologies/android-user-101#neo:ErrorCodesEnum"/>
     </owl:DatatypeProperty>
     
@@ -269,7 +270,9 @@
 
     <!-- http://inceptai.com/neo/ontologies/android-user-101#BandwidthProperty -->
 
-    <owl:DatatypeProperty rdf:about="http://inceptai.com/neo/ontologies/android-user-101#BandwidthProperty"/>
+    <owl:DatatypeProperty rdf:about="http://inceptai.com/neo/ontologies/android-user-101#BandwidthProperty">
+        <rdfs:domain rdf:resource="http://inceptai.com/neo/ontologies/android-user-101#InternetConnection"/>
+    </owl:DatatypeProperty>
     
 
 
@@ -277,6 +280,7 @@
 
     <owl:DatatypeProperty rdf:about="http://inceptai.com/neo/ontologies/android-user-101#BestServerLatencyMs">
         <rdfs:subPropertyOf rdf:resource="http://inceptai.com/neo/ontologies/android-user-101#BandwidthProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
     </owl:DatatypeProperty>
     
@@ -304,6 +308,7 @@
 
     <owl:DatatypeProperty rdf:about="http://inceptai.com/neo/ontologies/android-user-101#DownloadBandwidthMetric">
         <rdfs:subPropertyOf rdf:resource="http://inceptai.com/neo/ontologies/android-user-101#BandwidthProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:range rdf:resource="http://inceptai.com/neo/ontologies/android-user-101#neo:MetricQualityEnum"/>
     </owl:DatatypeProperty>
     
@@ -322,6 +327,7 @@
 
     <owl:DatatypeProperty rdf:about="http://inceptai.com/neo/ontologies/android-user-101#DownloadMbps">
         <rdfs:subPropertyOf rdf:resource="http://inceptai.com/neo/ontologies/android-user-101#BandwidthProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
     </owl:DatatypeProperty>
     
@@ -365,13 +371,17 @@
 
     <!-- http://inceptai.com/neo/ontologies/android-user-101#HttpProperty -->
 
-    <owl:DatatypeProperty rdf:about="http://inceptai.com/neo/ontologies/android-user-101#HttpProperty"/>
+    <owl:DatatypeProperty rdf:about="http://inceptai.com/neo/ontologies/android-user-101#HttpProperty">
+        <rdfs:domain rdf:resource="http://inceptai.com/neo/ontologies/android-user-101#InternetConnection"/>
+    </owl:DatatypeProperty>
     
 
 
     <!-- http://inceptai.com/neo/ontologies/android-user-101#PingProperty -->
 
-    <owl:DatatypeProperty rdf:about="http://inceptai.com/neo/ontologies/android-user-101#PingProperty"/>
+    <owl:DatatypeProperty rdf:about="http://inceptai.com/neo/ontologies/android-user-101#PingProperty">
+        <rdfs:domain rdf:resource="http://inceptai.com/neo/ontologies/android-user-101#InternetConnection"/>
+    </owl:DatatypeProperty>
     
 
 
@@ -465,6 +475,7 @@
 
     <owl:DatatypeProperty rdf:about="http://inceptai.com/neo/ontologies/android-user-101#UploadBandwidthMetric">
         <rdfs:subPropertyOf rdf:resource="http://inceptai.com/neo/ontologies/android-user-101#BandwidthProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:range rdf:resource="http://inceptai.com/neo/ontologies/android-user-101#neo:MetricQualityEnum"/>
     </owl:DatatypeProperty>
     
@@ -474,6 +485,7 @@
 
     <owl:DatatypeProperty rdf:about="http://inceptai.com/neo/ontologies/android-user-101#UploadMbps">
         <rdfs:subPropertyOf rdf:resource="http://inceptai.com/neo/ontologies/android-user-101#BandwidthProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
     </owl:DatatypeProperty>
     

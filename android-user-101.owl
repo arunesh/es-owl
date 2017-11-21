@@ -24,7 +24,137 @@
     <!-- http://inceptai.com/neo/ontologies/android-user-101#neo:ErrorCodesEnum -->
 
     <rdfs:Datatype rdf:about="http://inceptai.com/neo/ontologies/android-user-101#neo:ErrorCodesEnum">
-        <owl:equivalentClass rdf:resource="http://inceptai.com/neo/ontologies/android-user-101#neo:MetricQualityEnum"/>
+        <owl:equivalentClass>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>ERROR_CONNECTION_ERROR</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>ERROR_DHCP_INFO_UNAVAILABLE</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>ERROR_FETCHING_CONFIG</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first>ERROR_FETCHING_SERVER_INFO</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first>ERROR_INVALID_HTTP_RESPONSE</rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first>ERROR_PARSING_CONFIG</rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                        <rdf:first>ERROR_PARSING_SERVER_INFO</rdf:first>
+                                                                        <rdf:rest>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                <rdf:first>ERROR_PERFORMING_PING</rdf:first>
+                                                                                <rdf:rest>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                        <rdf:first>ERROR_SELECTING_BEST_SERVER</rdf:first>
+                                                                                        <rdf:rest>
+                                                                                            <rdf:Description>
+                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                <rdf:first>ERROR_SOCKET_ERROR</rdf:first>
+                                                                                                <rdf:rest>
+                                                                                                    <rdf:Description>
+                                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                        <rdf:first>ERROR_SOCKET_TIMEOUT</rdf:first>
+                                                                                                        <rdf:rest>
+                                                                                                            <rdf:Description>
+                                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                <rdf:first>ERROR_TEST_ALREADY_RUNNING</rdf:first>
+                                                                                                                <rdf:rest>
+                                                                                                                    <rdf:Description>
+                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                        <rdf:first>ERROR_TEST_INTERRUPTED</rdf:first>
+                                                                                                                        <rdf:rest>
+                                                                                                                            <rdf:Description>
+                                                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                <rdf:first>ERROR_UNINITIAlIZED</rdf:first>
+                                                                                                                                <rdf:rest>
+                                                                                                                                    <rdf:Description>
+                                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                        <rdf:first>ERROR_WIFI_CONNECTED_AND_OFFLINE</rdf:first>
+                                                                                                                                        <rdf:rest>
+                                                                                                                                            <rdf:Description>
+                                                                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                                <rdf:first>ERROR_WIFI_CONNECTED_AND_UNKNOWN</rdf:first>
+                                                                                                                                                <rdf:rest>
+                                                                                                                                                    <rdf:Description>
+                                                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                                        <rdf:first>ERROR_WIFI_IN_CAPTIVE_PORTAL</rdf:first>
+                                                                                                                                                        <rdf:rest>
+                                                                                                                                                            <rdf:Description>
+                                                                                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                                                <rdf:first>ERROR_WIFI_OFFLINE</rdf:first>
+                                                                                                                                                                <rdf:rest>
+                                                                                                                                                                    <rdf:Description>
+                                                                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                                                        <rdf:first>ERROR_WIFI_ON_AND_DISCONNECTED, ERROR_WIFI_OFF</rdf:first>
+                                                                                                                                                                        <rdf:rest>
+                                                                                                                                                                            <rdf:Description>
+                                                                                                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                                                                <rdf:first>ERROR_WIFI_UNKNOWN_STATE</rdf:first>
+                                                                                                                                                                                <rdf:rest>
+                                                                                                                                                                                    <rdf:Description>
+                                                                                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                                                                        <rdf:first>NO_ERROR, ERROR_UNKNOWN</rdf:first>
+                                                                                                                                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                                                                                                                                    </rdf:Description>
+                                                                                                                                                                                </rdf:rest>
+                                                                                                                                                                            </rdf:Description>
+                                                                                                                                                                        </rdf:rest>
+                                                                                                                                                                    </rdf:Description>
+                                                                                                                                                                </rdf:rest>
+                                                                                                                                                            </rdf:Description>
+                                                                                                                                                        </rdf:rest>
+                                                                                                                                                    </rdf:Description>
+                                                                                                                                                </rdf:rest>
+                                                                                                                                            </rdf:Description>
+                                                                                                                                        </rdf:rest>
+                                                                                                                                    </rdf:Description>
+                                                                                                                                </rdf:rest>
+                                                                                                                            </rdf:Description>
+                                                                                                                        </rdf:rest>
+                                                                                                                    </rdf:Description>
+                                                                                                                </rdf:rest>
+                                                                                                            </rdf:Description>
+                                                                                                        </rdf:rest>
+                                                                                                    </rdf:Description>
+                                                                                                </rdf:rest>
+                                                                                            </rdf:Description>
+                                                                                        </rdf:rest>
+                                                                                    </rdf:Description>
+                                                                                </rdf:rest>
+                                                                            </rdf:Description>
+                                                                        </rdf:rest>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </owl:equivalentClass>
     </rdfs:Datatype>
     
 
@@ -549,9 +679,76 @@
     
 
 
+    <!-- http://inceptai.com/neo/ontologies/android-user-101#DnsCondition -->
+
+    <owl:Class rdf:about="http://inceptai.com/neo/ontologies/android-user-101#DnsCondition">
+        <rdfs:subClassOf rdf:resource="http://inceptai.com/neo/ontologies/android-user-101#PossibleCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://inceptai.com/neo/ontologies/android-user-101#DnsUnreachable -->
+
+    <owl:Class rdf:about="http://inceptai.com/neo/ontologies/android-user-101#DnsUnreachable">
+        <rdfs:subClassOf rdf:resource="http://inceptai.com/neo/ontologies/android-user-101#DnsCondition"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://inceptai.com/neo/ontologies/android-user-101#InternetConnection"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://inceptai.com/neo/ontologies/android-user-101#DownloadBandwidthMetric"/>
+                                <owl:hasValue>NONFUNCTIONAL</owl:hasValue>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://inceptai.com/neo/ontologies/android-user-101#UploadBandwidthMetric"/>
+                                <owl:hasValue>NONFUNCTIONAL</owl:hasValue>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- http://inceptai.com/neo/ontologies/android-user-101#InternetConnection -->
 
     <owl:Class rdf:about="http://inceptai.com/neo/ontologies/android-user-101#InternetConnection"/>
+    
+
+
+    <!-- http://inceptai.com/neo/ontologies/android-user-101#IspCondition -->
+
+    <owl:Class rdf:about="http://inceptai.com/neo/ontologies/android-user-101#IspCondition">
+        <rdfs:subClassOf rdf:resource="http://inceptai.com/neo/ontologies/android-user-101#PossibleCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://inceptai.com/neo/ontologies/android-user-101#IspInternetDown -->
+
+    <owl:Class rdf:about="http://inceptai.com/neo/ontologies/android-user-101#IspInternetDown">
+        <rdfs:subClassOf rdf:resource="http://inceptai.com/neo/ontologies/android-user-101#IspCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://inceptai.com/neo/ontologies/android-user-101#IspInternetSlow -->
+
+    <owl:Class rdf:about="http://inceptai.com/neo/ontologies/android-user-101#IspInternetSlow">
+        <rdfs:subClassOf rdf:resource="http://inceptai.com/neo/ontologies/android-user-101#IspCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://inceptai.com/neo/ontologies/android-user-101#MiscCondition -->
+
+    <owl:Class rdf:about="http://inceptai.com/neo/ontologies/android-user-101#MiscCondition">
+        <rdfs:subClassOf rdf:resource="http://inceptai.com/neo/ontologies/android-user-101#PossibleCondition"/>
+    </owl:Class>
     
 
 
@@ -573,9 +770,55 @@
     
 
 
+    <!-- http://inceptai.com/neo/ontologies/android-user-101#PossibleCondition -->
+
+    <owl:Class rdf:about="http://inceptai.com/neo/ontologies/android-user-101#PossibleCondition"/>
+    
+
+
+    <!-- http://inceptai.com/neo/ontologies/android-user-101#RouterCondition -->
+
+    <owl:Class rdf:about="http://inceptai.com/neo/ontologies/android-user-101#RouterCondition">
+        <rdfs:subClassOf rdf:resource="http://inceptai.com/neo/ontologies/android-user-101#PossibleCondition"/>
+    </owl:Class>
+    
+
+
     <!-- http://inceptai.com/neo/ontologies/android-user-101#User -->
 
     <owl:Class rdf:about="http://inceptai.com/neo/ontologies/android-user-101#User"/>
+    
+
+
+    <!-- http://inceptai.com/neo/ontologies/android-user-101#WifiChannelBadSignal -->
+
+    <owl:Class rdf:about="http://inceptai.com/neo/ontologies/android-user-101#WifiChannelBadSignal">
+        <rdfs:subClassOf rdf:resource="http://inceptai.com/neo/ontologies/android-user-101#WifiCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://inceptai.com/neo/ontologies/android-user-101#WifiChannelCongestion -->
+
+    <owl:Class rdf:about="http://inceptai.com/neo/ontologies/android-user-101#WifiChannelCongestion">
+        <rdfs:subClassOf rdf:resource="http://inceptai.com/neo/ontologies/android-user-101#WifiCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://inceptai.com/neo/ontologies/android-user-101#WifiCondition -->
+
+    <owl:Class rdf:about="http://inceptai.com/neo/ontologies/android-user-101#WifiCondition">
+        <rdfs:subClassOf rdf:resource="http://inceptai.com/neo/ontologies/android-user-101#PossibleCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://inceptai.com/neo/ontologies/android-user-101#WifiInterfaceOff -->
+
+    <owl:Class rdf:about="http://inceptai.com/neo/ontologies/android-user-101#WifiInterfaceOff">
+        <rdfs:subClassOf rdf:resource="http://inceptai.com/neo/ontologies/android-user-101#WifiCondition"/>
+    </owl:Class>
     
 
 

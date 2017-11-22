@@ -1,0 +1,647 @@
+@prefix : <http://inceptai.com/neo/ontologies/android-user-101#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://inceptai.com/neo/ontologies/android-user-101> .
+
+<http://inceptai.com/neo/ontologies/android-user-101> rdf:type owl:Ontology .
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://inceptai.com/neo/ontologies/android-user-101#neo:ErrorCodesEnum
+:ErrorCodesEnum rdf:type rdfs:Datatype ;
+                owl:equivalentClass [ rdf:type rdfs:Datatype ;
+                                      owl:oneOf [ rdf:type rdf:List ;
+                                                  rdf:first "ERROR_CONNECTION_ERROR" ;
+                                                  rdf:rest [ rdf:type rdf:List ;
+                                                             rdf:first "ERROR_DHCP_INFO_UNAVAILABLE" ;
+                                                             rdf:rest [ rdf:type rdf:List ;
+                                                                        rdf:first "ERROR_FETCHING_CONFIG" ;
+                                                                        rdf:rest [ rdf:type rdf:List ;
+                                                                                   rdf:first "ERROR_FETCHING_SERVER_INFO" ;
+                                                                                   rdf:rest [ rdf:type rdf:List ;
+                                                                                              rdf:first "ERROR_INVALID_HTTP_RESPONSE" ;
+                                                                                              rdf:rest [ rdf:type rdf:List ;
+                                                                                                         rdf:first "ERROR_PARSING_CONFIG" ;
+                                                                                                         rdf:rest [ rdf:type rdf:List ;
+                                                                                                                    rdf:first "ERROR_PARSING_SERVER_INFO" ;
+                                                                                                                    rdf:rest [ rdf:type rdf:List ;
+                                                                                                                               rdf:first "ERROR_PERFORMING_PING" ;
+                                                                                                                               rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                          rdf:first "ERROR_SELECTING_BEST_SERVER" ;
+                                                                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                     rdf:first "ERROR_SOCKET_ERROR" ;
+                                                                                                                                                     rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                rdf:first "ERROR_SOCKET_TIMEOUT" ;
+                                                                                                                                                                rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                           rdf:first "ERROR_TEST_ALREADY_RUNNING" ;
+                                                                                                                                                                           rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                                      rdf:first "ERROR_TEST_INTERRUPTED" ;
+                                                                                                                                                                                      rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                                                 rdf:first "ERROR_UNINITIAlIZED" ;
+                                                                                                                                                                                                 rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                                                            rdf:first "ERROR_WIFI_CONNECTED_AND_OFFLINE" ;
+                                                                                                                                                                                                            rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                                                                       rdf:first "ERROR_WIFI_CONNECTED_AND_UNKNOWN" ;
+                                                                                                                                                                                                                       rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                                                                                  rdf:first "ERROR_WIFI_IN_CAPTIVE_PORTAL" ;
+                                                                                                                                                                                                                                  rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                                                                                             rdf:first "ERROR_WIFI_OFFLINE" ;
+                                                                                                                                                                                                                                             rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                                                                                                        rdf:first "ERROR_WIFI_ON_AND_DISCONNECTED, ERROR_WIFI_OFF" ;
+                                                                                                                                                                                                                                                        rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                                                                                                                   rdf:first "ERROR_WIFI_UNKNOWN_STATE" ;
+                                                                                                                                                                                                                                                                   rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                                                                                                                              rdf:first "NO_ERROR, ERROR_UNKNOWN" ;
+                                                                                                                                                                                                                                                                              rdf:rest rdf:nil
+                                                                                                                                                                                                                                                                            ]
+                                                                                                                                                                                                                                                                 ]
+                                                                                                                                                                                                                                                      ]
+                                                                                                                                                                                                                                           ]
+                                                                                                                                                                                                                                ]
+                                                                                                                                                                                                                     ]
+                                                                                                                                                                                                          ]
+                                                                                                                                                                                               ]
+                                                                                                                                                                                    ]
+                                                                                                                                                                         ]
+                                                                                                                                                              ]
+                                                                                                                                                   ]
+                                                                                                                                        ]
+                                                                                                                             ]
+                                                                                                                  ]
+                                                                                                       ]
+                                                                                            ]
+                                                                                 ]
+                                                                      ]
+                                                           ]
+                                                ]
+                                    ] .
+
+
+###  http://inceptai.com/neo/ontologies/android-user-101#neo:MetricQualityEnum
+:MetricQualityEnum rdf:type rdfs:Datatype ;
+                   owl:equivalentClass [ rdf:type rdfs:Datatype ;
+                                         owl:oneOf [ rdf:type rdf:List ;
+                                                     rdf:first "ABYSMAL" ;
+                                                     rdf:rest [ rdf:type rdf:List ;
+                                                                rdf:first "AVERAGE" ;
+                                                                rdf:rest [ rdf:type rdf:List ;
+                                                                           rdf:first "EXCELLENT" ;
+                                                                           rdf:rest [ rdf:type rdf:List ;
+                                                                                      rdf:first "GOOD" ;
+                                                                                      rdf:rest [ rdf:type rdf:List ;
+                                                                                                 rdf:first "NONFUNCTIONAL" ;
+                                                                                                 rdf:rest [ rdf:type rdf:List ;
+                                                                                                            rdf:first "POOR" ;
+                                                                                                            rdf:rest [ rdf:type rdf:List ;
+                                                                                                                       rdf:first "UNKNOWN" ;
+                                                                                                                       rdf:rest rdf:nil
+                                                                                                                     ]
+                                                                                                          ]
+                                                                                               ]
+                                                                                    ]
+                                                                         ]
+                                                              ]
+                                                   ]
+                                       ] .
+
+
+###  http://inceptai.com/neo/ontologies/android-user-101#neo:WifiConnecitivityModesEnum
+:WifiConnecitivityModesEnum rdf:type rdfs:Datatype ;
+                            owl:equivalentClass [ rdf:type rdfs:Datatype ;
+                                                  owl:oneOf [ rdf:type rdf:List ;
+                                                              rdf:first "CONNECTED_AND_CAPTIVE_PORTAL" ;
+                                                              rdf:rest [ rdf:type rdf:List ;
+                                                                         rdf:first "CONNECTED_AND_OFFLINE" ;
+                                                                         rdf:rest [ rdf:type rdf:List ;
+                                                                                    rdf:first "CONNECTED_AND_ONLINE" ;
+                                                                                    rdf:rest [ rdf:type rdf:List ;
+                                                                                               rdf:first "CONNECTED_AND_UNKNOWN" ;
+                                                                                               rdf:rest [ rdf:type rdf:List ;
+                                                                                                          rdf:first "MAX_MODES" ;
+                                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                                     rdf:first "OFF" ;
+                                                                                                                     rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                rdf:first "ON_AND_DISCONNECTED" ;
+                                                                                                                                rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                           rdf:first "UNKNOWN" ;
+                                                                                                                                           rdf:rest rdf:nil
+                                                                                                                                         ]
+                                                                                                                              ]
+                                                                                                                   ]
+                                                                                                        ]
+                                                                                             ]
+                                                                                  ]
+                                                                       ]
+                                                            ]
+                                                ] .
+
+
+###  http://inceptai.com/neo/ontologies/android-user-101#neo:WifiLinkStateEnum
+:WifiLinkStateEnum rdf:type rdfs:Datatype ;
+                   owl:equivalentClass [ rdf:type rdfs:Datatype ;
+                                         owl:oneOf [ rdf:type rdf:List ;
+                                                     rdf:first "CONNECTING" ;
+                                                     rdf:rest [ rdf:type rdf:List ;
+                                                                rdf:first "DISCONNECTED" ;
+                                                                rdf:rest [ rdf:type rdf:List ;
+                                                                           rdf:first "FREQUENT_DISCONNECTIONS" ;
+                                                                           rdf:rest [ rdf:type rdf:List ;
+                                                                                      rdf:first "HANGING_ON_AUTHENTICATING" ;
+                                                                                      rdf:rest [ rdf:type rdf:List ;
+                                                                                                 rdf:first "HANGING_ON_DHCP" ;
+                                                                                                 rdf:rest [ rdf:type rdf:List ;
+                                                                                                            rdf:first "HANGING_ON_SCANNING" ;
+                                                                                                            rdf:rest [ rdf:type rdf:List ;
+                                                                                                                       rdf:first "MAX_MODES" ;
+                                                                                                                       rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                  rdf:first "NO_PROBLEM_DEFAULT_STATE" ;
+                                                                                                                                  rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                             rdf:first "UNKNOWN" ;
+                                                                                                                                             rdf:rest rdf:nil
+                                                                                                                                           ]
+                                                                                                                                ]
+                                                                                                                     ]
+                                                                                                          ]
+                                                                                               ]
+                                                                                    ]
+                                                                         ]
+                                                              ]
+                                                   ]
+                                       ] .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://inceptai.com/neo/ontologies/android-user-101#NetworkInterface
+:NetworkInterface rdf:type owl:ObjectProperty ;
+                  rdfs:domain :InternetConnection ;
+                  rdfs:range :Network .
+
+
+###  http://inceptai.com/neo/ontologies/android-user-101#hasDiagnosis
+:hasDiagnosis rdf:type owl:ObjectProperty ,
+                       owl:FunctionalProperty ;
+              rdfs:domain :InternetConnection ;
+              rdfs:range :Diagnosis .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://inceptai.com/neo/ontologies/android-user-101#AlternativeDnsLatencyMs
+:AlternativeDnsLatencyMs rdf:type owl:DatatypeProperty ;
+                         rdfs:subPropertyOf :PingProperty ;
+                         rdfs:range xsd:double .
+
+
+###  http://inceptai.com/neo/ontologies/android-user-101#AlternativeDnsMetric
+:AlternativeDnsMetric rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf :PingProperty ;
+                      rdfs:range :MetricQualityEnum .
+
+
+###  http://inceptai.com/neo/ontologies/android-user-101#BandwidthErrorCode
+:BandwidthErrorCode rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf :BandwidthProperty ;
+                    rdf:type owl:FunctionalProperty ;
+                    rdfs:range :ErrorCodesEnum .
+
+
+###  http://inceptai.com/neo/ontologies/android-user-101#BandwidthProperty
+:BandwidthProperty rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :InternetConnection .
+
+
+###  http://inceptai.com/neo/ontologies/android-user-101#BestServerLatencyMs
+:BestServerLatencyMs rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf :BandwidthProperty ;
+                     rdf:type owl:FunctionalProperty ;
+                     rdfs:range xsd:double .
+
+
+###  http://inceptai.com/neo/ontologies/android-user-101#DnsLatencyMetric
+:DnsLatencyMetric rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf :PingProperty ;
+                  rdfs:range :MetricQualityEnum .
+
+
+###  http://inceptai.com/neo/ontologies/android-user-101#DnsLatencyMs
+:DnsLatencyMs rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf :PingProperty ;
+              rdfs:range xsd:double .
+
+
+###  http://inceptai.com/neo/ontologies/android-user-101#DownloadBandwidthMetric
+:DownloadBandwidthMetric rdf:type owl:DatatypeProperty ;
+                         rdfs:subPropertyOf :BandwidthProperty ;
+                         rdf:type owl:FunctionalProperty ;
+                         rdfs:range :MetricQualityEnum .
+
+
+###  http://inceptai.com/neo/ontologies/android-user-101#DownloadLatencyMetric
+:DownloadLatencyMetric rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf :HttpProperty ;
+                       rdfs:range :MetricQualityEnum .
+
+
+###  http://inceptai.com/neo/ontologies/android-user-101#DownloadMbps
+:DownloadMbps rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf :BandwidthProperty ;
+              rdf:type owl:FunctionalProperty ;
+              rdfs:range xsd:double .
+
+
+###  http://inceptai.com/neo/ontologies/android-user-101#ExternalServerLatencyMetric
+:ExternalServerLatencyMetric rdf:type owl:DatatypeProperty ;
+                             rdfs:subPropertyOf :PingProperty ;
+                             rdfs:range :MetricQualityEnum .
+
+
+###  http://inceptai.com/neo/ontologies/android-user-101#ExternalServerLatencyMs
+:ExternalServerLatencyMs rdf:type owl:DatatypeProperty ;
+                         rdfs:subPropertyOf :PingProperty ;
+                         rdfs:range xsd:double .
+
+
+###  http://inceptai.com/neo/ontologies/android-user-101#HttpDownloadLatencyMs
+:HttpDownloadLatencyMs rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf :HttpProperty ;
+                       rdfs:range xsd:double .
+
+
+###  http://inceptai.com/neo/ontologies/android-user-101#HttpErrorCode
+:HttpErrorCode rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf :HttpProperty ;
+               rdfs:range :ErrorCodesEnum .
+
+
+###  http://inceptai.com/neo/ontologies/android-user-101#HttpProperty
+:HttpProperty rdf:type owl:DatatypeProperty ;
+              rdfs:domain :InternetConnection .
+
+
+###  http://inceptai.com/neo/ontologies/android-user-101#PingProperty
+:PingProperty rdf:type owl:DatatypeProperty ;
+              rdfs:domain :InternetConnection .
+
+
+###  http://inceptai.com/neo/ontologies/android-user-101#PrimaryAPBSSID
+:PrimaryAPBSSID rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf :WifiNetworkProperty ;
+                rdf:type owl:FunctionalProperty ;
+                rdfs:range xsd:string .
+
+
+###  http://inceptai.com/neo/ontologies/android-user-101#PrimaryAPChannel
+:PrimaryAPChannel rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf :WifiNetworkProperty ;
+                  rdfs:range xsd:integer .
+
+
+###  http://inceptai.com/neo/ontologies/android-user-101#PrimaryAPLinkSpeed
+:PrimaryAPLinkSpeed rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf :WifiNetworkProperty ;
+                    rdfs:range xsd:double .
+
+
+###  http://inceptai.com/neo/ontologies/android-user-101#PrimaryAPLinkSpeedMetric
+:PrimaryAPLinkSpeedMetric rdf:type owl:DatatypeProperty ;
+                          rdfs:subPropertyOf :WifiNetworkProperty ;
+                          rdf:type owl:FunctionalProperty ;
+                          rdfs:range :MetricQualityEnum .
+
+
+###  http://inceptai.com/neo/ontologies/android-user-101#PrimaryAPSSID
+:PrimaryAPSSID rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf :WifiNetworkProperty ;
+               rdf:type owl:FunctionalProperty ;
+               rdfs:range xsd:string .
+
+
+###  http://inceptai.com/neo/ontologies/android-user-101#PrimaryAPSignalMetric
+:PrimaryAPSignalMetric rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf :WifiNetworkProperty ;
+                       rdf:type owl:FunctionalProperty ;
+                       rdfs:range :MetricQualityEnum .
+
+
+###  http://inceptai.com/neo/ontologies/android-user-101#PrimaryLinkChannelOccupancyMetric
+:PrimaryLinkChannelOccupancyMetric rdf:type owl:DatatypeProperty ;
+                                   rdfs:subPropertyOf :WifiNetworkProperty ;
+                                   rdf:type owl:FunctionalProperty ;
+                                   rdfs:range :MetricQualityEnum .
+
+
+###  http://inceptai.com/neo/ontologies/android-user-101#RouterLatencyMetric
+:RouterLatencyMetric rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf :PingProperty ;
+                     rdfs:range :MetricQualityEnum .
+
+
+###  http://inceptai.com/neo/ontologies/android-user-101#RouterLatencyMs
+:RouterLatencyMs rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf :PingProperty ;
+                 rdfs:range xsd:double .
+
+
+###  http://inceptai.com/neo/ontologies/android-user-101#UploadBandwidthMetric
+:UploadBandwidthMetric rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf :BandwidthProperty ;
+                       rdf:type owl:FunctionalProperty ;
+                       rdfs:range :MetricQualityEnum .
+
+
+###  http://inceptai.com/neo/ontologies/android-user-101#UploadMbps
+:UploadMbps rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :BandwidthProperty ;
+            rdf:type owl:FunctionalProperty ;
+            rdfs:range xsd:double .
+
+
+###  http://inceptai.com/neo/ontologies/android-user-101#WifiConnectivityMode
+:WifiConnectivityMode rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf :WifiNetworkProperty ;
+                      rdf:type owl:FunctionalProperty ;
+                      rdfs:range :WifiConnecitivityModesEnum .
+
+
+###  http://inceptai.com/neo/ontologies/android-user-101#WifiDataRate
+:WifiDataRate rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf :WifiNetworkProperty ;
+              rdf:type owl:FunctionalProperty ;
+              rdfs:range xsd:integer .
+
+
+###  http://inceptai.com/neo/ontologies/android-user-101#WifiErrorCode
+:WifiErrorCode rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf :WifiNetworkProperty ;
+               rdfs:range :ErrorCodesEnum .
+
+
+###  http://inceptai.com/neo/ontologies/android-user-101#WifiLinkMode
+:WifiLinkMode rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf :WifiNetworkProperty ;
+              rdf:type owl:FunctionalProperty ;
+              rdfs:range :WifiLinkStateEnum .
+
+
+###  http://inceptai.com/neo/ontologies/android-user-101#WifiNetworkProperty
+:WifiNetworkProperty rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :WifiNetwork .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://inceptai.com/neo/ontologies/android-user-101#Bandwidth
+:Bandwidth rdf:type owl:Class .
+
+
+###  http://inceptai.com/neo/ontologies/android-user-101#BandwidthFunctional
+:BandwidthFunctional rdf:type owl:Class ;
+                     owl:equivalentClass :InternetFunctional ,
+                                         [ owl:intersectionOf ( :DownloadBandwidthFunctional
+                                                                :UploadBandwidthFunctional
+                                                              ) ;
+                                           rdf:type owl:Class
+                                         ] ;
+                     rdfs:subClassOf :Bandwidth ,
+                                     [ owl:intersectionOf ( :DnsFunctional
+                                                            :IspFunctional
+                                                            :WifiFunctional
+                                                          ) ;
+                                       rdf:type owl:Class
+                                     ] .
+
+
+###  http://inceptai.com/neo/ontologies/android-user-101#DNS
+:DNS rdf:type owl:Class .
+
+
+###  http://inceptai.com/neo/ontologies/android-user-101#Diagnosis
+:Diagnosis rdf:type owl:Class .
+
+
+###  http://inceptai.com/neo/ontologies/android-user-101#DnsFunctional
+:DnsFunctional rdf:type owl:Class ;
+               rdfs:subClassOf :DNS .
+
+
+###  http://inceptai.com/neo/ontologies/android-user-101#DnsUnreachable
+:DnsUnreachable rdf:type owl:Class ;
+                rdfs:subClassOf :DNS .
+
+
+###  http://inceptai.com/neo/ontologies/android-user-101#DownloadBandwidthFunctional
+:DownloadBandwidthFunctional rdf:type owl:Class ;
+                             owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                   owl:onProperty :DownloadBandwidthMetric ;
+                                                   owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                        owl:oneOf [ rdf:type rdf:List ;
+                                                                                    rdf:first "AVERAGE" ;
+                                                                                    rdf:rest [ rdf:type rdf:List ;
+                                                                                               rdf:first "EXCELLENT" ;
+                                                                                               rdf:rest [ rdf:type rdf:List ;
+                                                                                                          rdf:first "GOOD" ;
+                                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                                     rdf:first "POOR" ;
+                                                                                                                     rdf:rest rdf:nil
+                                                                                                                   ]
+                                                                                                        ]
+                                                                                             ]
+                                                                                  ]
+                                                                      ]
+                                                 ] ;
+                             rdfs:subClassOf :Bandwidth .
+
+
+###  http://inceptai.com/neo/ontologies/android-user-101#HighSpeed
+:HighSpeed rdf:type owl:Class ;
+           rdfs:subClassOf :BandwidthFunctional .
+
+
+###  http://inceptai.com/neo/ontologies/android-user-101#InternetConnection
+:InternetConnection rdf:type owl:Class .
+
+
+###  http://inceptai.com/neo/ontologies/android-user-101#InternetFunctional
+:InternetFunctional rdf:type owl:Class ;
+                    rdfs:subClassOf :Diagnosis .
+
+
+###  http://inceptai.com/neo/ontologies/android-user-101#InternetNonFunctional
+:InternetNonFunctional rdf:type owl:Class ;
+                       rdfs:subClassOf :Diagnosis .
+
+
+###  http://inceptai.com/neo/ontologies/android-user-101#InternetNormal
+:InternetNormal rdf:type owl:Class ;
+                rdfs:subClassOf :Diagnosis .
+
+
+###  http://inceptai.com/neo/ontologies/android-user-101#InternetProvider
+:InternetProvider rdf:type owl:Class .
+
+
+###  http://inceptai.com/neo/ontologies/android-user-101#InternetSlow
+:InternetSlow rdf:type owl:Class ;
+              owl:equivalentClass [ rdf:type owl:Class ;
+                                    owl:unionOf ( [ rdf:type owl:Restriction ;
+                                                    owl:onProperty :DownloadBandwidthMetric ;
+                                                    owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                         owl:oneOf [ rdf:type rdf:List ;
+                                                                                     rdf:first "ABYSMAL" ;
+                                                                                     rdf:rest [ rdf:type rdf:List ;
+                                                                                                rdf:first "POOR" ;
+                                                                                                rdf:rest rdf:nil
+                                                                                              ]
+                                                                                   ]
+                                                                       ]
+                                                  ]
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty :UploadBandwidthMetric ;
+                                                    owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                         owl:oneOf [ rdf:type rdf:List ;
+                                                                                     rdf:first "ABYSMAL" ;
+                                                                                     rdf:rest [ rdf:type rdf:List ;
+                                                                                                rdf:first "POOR" ;
+                                                                                                rdf:rest rdf:nil
+                                                                                              ]
+                                                                                   ]
+                                                                       ]
+                                                  ]
+                                                )
+                                  ] ;
+              rdfs:subClassOf :Diagnosis .
+
+
+###  http://inceptai.com/neo/ontologies/android-user-101#IspDown
+:IspDown rdf:type owl:Class ;
+         rdfs:subClassOf :InternetProvider .
+
+
+###  http://inceptai.com/neo/ontologies/android-user-101#IspFunctional
+:IspFunctional rdf:type owl:Class ;
+               rdfs:subClassOf :InternetProvider .
+
+
+###  http://inceptai.com/neo/ontologies/android-user-101#IspNormal
+:IspNormal rdf:type owl:Class ;
+           rdfs:subClassOf :IspFunctional .
+
+
+###  http://inceptai.com/neo/ontologies/android-user-101#IspSlow
+:IspSlow rdf:type owl:Class ;
+         rdfs:subClassOf :IspFunctional .
+
+
+###  http://inceptai.com/neo/ontologies/android-user-101#Network
+:Network rdf:type owl:Class .
+
+
+###  http://inceptai.com/neo/ontologies/android-user-101#NormalSpeed
+:NormalSpeed rdf:type owl:Class ;
+             rdfs:subClassOf :BandwidthFunctional .
+
+
+###  http://inceptai.com/neo/ontologies/android-user-101#Offline
+:Offline rdf:type owl:Class ;
+         rdfs:subClassOf :Bandwidth .
+
+
+###  http://inceptai.com/neo/ontologies/android-user-101#Phone
+:Phone rdf:type owl:Class .
+
+
+###  http://inceptai.com/neo/ontologies/android-user-101#Router
+:Router rdf:type owl:Class .
+
+
+###  http://inceptai.com/neo/ontologies/android-user-101#RouterFunctional
+:RouterFunctional rdf:type owl:Class ;
+                  rdfs:subClassOf :Router .
+
+
+###  http://inceptai.com/neo/ontologies/android-user-101#RouterLatencyHigh
+:RouterLatencyHigh rdf:type owl:Class ;
+                   rdfs:subClassOf :RouterFunctional .
+
+
+###  http://inceptai.com/neo/ontologies/android-user-101#RouterLatencyLow
+:RouterLatencyLow rdf:type owl:Class ;
+                  rdfs:subClassOf :RouterFunctional .
+
+
+###  http://inceptai.com/neo/ontologies/android-user-101#RouterUnreachable
+:RouterUnreachable rdf:type owl:Class ;
+                   rdfs:subClassOf :InternetNonFunctional ,
+                                   :Router .
+
+
+###  http://inceptai.com/neo/ontologies/android-user-101#SlowSpeed
+:SlowSpeed rdf:type owl:Class ;
+           rdfs:subClassOf :BandwidthFunctional .
+
+
+###  http://inceptai.com/neo/ontologies/android-user-101#UploadBandwidthFunctional
+:UploadBandwidthFunctional rdf:type owl:Class ;
+                           owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                 owl:onProperty :UploadBandwidthMetric ;
+                                                 owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                      owl:oneOf [ rdf:type rdf:List ;
+                                                                                  rdf:first "AVERAGE" ;
+                                                                                  rdf:rest [ rdf:type rdf:List ;
+                                                                                             rdf:first "EXCELLENT" ;
+                                                                                             rdf:rest [ rdf:type rdf:List ;
+                                                                                                        rdf:first "GOOD" ;
+                                                                                                        rdf:rest [ rdf:type rdf:List ;
+                                                                                                                   rdf:first "POOR" ;
+                                                                                                                   rdf:rest rdf:nil
+                                                                                                                 ]
+                                                                                                      ]
+                                                                                           ]
+                                                                                ]
+                                                                    ]
+                                               ] ;
+                           rdfs:subClassOf :Bandwidth .
+
+
+###  http://inceptai.com/neo/ontologies/android-user-101#User
+:User rdf:type owl:Class .
+
+
+###  http://inceptai.com/neo/ontologies/android-user-101#WifiBadSignal
+:WifiBadSignal rdf:type owl:Class ;
+               rdfs:subClassOf :WifiNetwork .
+
+
+###  http://inceptai.com/neo/ontologies/android-user-101#WifiChannelCongested
+:WifiChannelCongested rdf:type owl:Class ;
+                      rdfs:subClassOf :WifiNetwork .
+
+
+###  http://inceptai.com/neo/ontologies/android-user-101#WifiFunctional
+:WifiFunctional rdf:type owl:Class ;
+                rdfs:subClassOf :WifiNetwork .
+
+
+###  http://inceptai.com/neo/ontologies/android-user-101#WifiNetwork
+:WifiNetwork rdf:type owl:Class ;
+             rdfs:subClassOf :Network .
+
+
+###  http://inceptai.com/neo/ontologies/android-user-101#WifiOffline
+:WifiOffline rdf:type owl:Class ;
+             rdfs:subClassOf :WifiNetwork .
+
+
+###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi
